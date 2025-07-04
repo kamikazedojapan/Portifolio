@@ -1,90 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Márcio | Portifólio</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Márcio | Portfólio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body>
-    <nav class = "navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#Inicio">Início</a>
-            </li>
-            <li>
-                <a href="#Sobre">Sobre</a>
-            </li>
-            <li>
-                <a href="#Projetos">Projetos</a>
-            </li>
-            <li>
-                <a href="#Contato">Contato</a>
-            </li>
-        </ul>
+  <body>
+    <nav class="navegacao">
+      <ul class="menu">
+        <li><a href="#inicio" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#projetos" class="menu-link">Projetos</a></li>
+        <li><a href="#tecnologias" class="menu-link">Tecnologias</a></li>
+        <li><a href="#contatos" class="menu-link">Contato</a></li>
+      </ul>
     </nav>
 
     <main id="inicio" class="cabecalho">
-        <img src="./img/IMG_20230726_191125_288.jpg" class="foto-perfil">
-            <h1>Olá, eu sou o Márcio!</h1>
-            <p>Desenvolvedor Front-End</p>
+      <img src="./img/perfil2.jpg" class="foto-perfil" />
+      <h1>Márcio Reis</h1>
+      <p class="cabecalho-sub-titulo">Desenvolvedor Web Full Stack</p>
     </main>
 
     <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
-        <div class="sobre-caixa">
-            <p class="sobre-paragrafo">
-                Sou desenvolvedor com conhecimento intermediário em Python (Pandas, Tkinter) e JavaScript (React, Node.js, Express), 
-                com foco em desenvolvimento web full stack. Tenho experiência prática em projetos próprios, com destaque para a criação de sistemas completos,
-                desde o backend até a interface, além da organização, documentação e publicação no GitHub. 
-                Sou movido pela resolução de problemas e pela construção de soluções úteis e funcionais. Tenho facilidade com lógica de programação, versionamento com Git, organização de código e aprendo com rapidez. 
-                Atualmente, busco minha primeira oportunidade como desenvolvedor web, onde possa aplicar meus conhecimentos, continuar evoluindo e contribuir com qualidade e responsabilidade para as equipes das quais fizer parte.
-            </p> <!-- Adicionar tecnologias e frameworks conforme for aprendendo, melhorando e criando novos projetos -->
-        </div>
+      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+          Sou desenvolvedor com conhecimento intermediário em JavaScript (React,
+          Vue, Node, Express, Next), Python (Pandas, Plotly, Streamlit, Tkinter),
+          Banco de Dados (MySQL, MongoDB) e versionamento de código (Git, GitHub),
+          com foco em desenvolvimento web full stack. Tenho experiência prática
+          em projetos próprios, com destaque para a criação de sistemas completos,
+          desde o backend até a interface. Busco minha primeira oportunidade como
+          desenvolvedor web para aplicar meus conhecimentos e evoluir
+          profissionalmente.
+        </p>
+      </div>
     </section>
-    
+
     <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Projetos</h2>
-        <div class="projetos-caixa">
-            <div class="projeto-card">
-                <img src="./img/projeto1.png" alt="MERN" class="projeto-imagem">
-                <h3 class="info-projetos">MERN</h3>
-                <p>Aplicação full‑stack usando MongoDB, Express, React e Node.js para criar um app interativo com quizzes, autenticação JWT, GraphQL e dark‑mode — estilo Duolingo para aprender japonês. :contentReference[oaicite:1]{index=1}</p>
+      <h2 class="projetos-titulo">Projetos</h2>
+      <div class="projetos-caixa">
+        <a href="https://github.com/kamikazedojapan/Site-de-Noticias" target="_blank">
+          <div class="projetos-card">
+            <img src="./img/projeto1.png" alt="MERN" class="projetos-imagem" />
+            <div class="caixa-textos-projetos">
+              <h3 class="info-projetos">Site de Notícias</h3>
+              <p class="paragrafo-projetos">
+                Aplicação full‑stack usando MongoDB, Express, React e Node.js para
+                criar um app interativo com Notícias, autenticação JWT, banco de dados,
+                interface gráfica responsiva e dinâmica.
+              </p>
             </div>
+          </div>
+        </a>
 
-            <div class="projeto-card">
-                <img src="./img/projeto2.png" alt="Sistema Financeiro de Receitas e Despesas" class="projeto-imagem">
-                <h3 class="info-projetos">Sistema Financeiro de Receitas e Despesas</h3>
-                <p>Ferramenta em JavaScript, HTML e CSS para controle de transações – receitas e despesas – com balanceamento em tempo real e tema claro/escuro; dados persistidos no localStorage. :contentReference[oaicite:2]{index=2}</p>
+        <a href="https://github.com/kamikazedojapan/sistema-financeiro" target="_blank">
+          <div class="projetos-card">
+            <img src="./img/projeto2.png" alt="Sistema Financeiro" class="projetos-imagem" />
+            <div class="caixa-textos-projetos">
+              <h3 class="info-projetos">Sistema Financeiro</h3>
+              <p class="paragrafo-projetos">
+                Ferramenta em JavaScript, HTML e CSS para controle de receitas e
+                despesas com balanceamento em tempo real e suporte a tema escuro.
+              </p>
             </div>
+          </div>
+        </a>
 
-            <div class="projeto-card">
-                <img src="./img/projeto3.png" alt="dashboard‑financeiro" class="projeto-imagem">
-                <h3 class="info-projetos">dashboard‑financeiro</h3>
-                <p>Dashboard interativo desenvolvido com Streamlit, Pandas e Plotly para visualização análise de dados de vendas de um supermercado. Exibe gráficos dinâmicos e análise de dados com foco em usabilidade e insights financeiros.</p>
+        <a href="https://github.com/kamikazedojapan/dashboard-financeiro" target="_blank">
+          <div class="projetos-card">
+            <img src="./img/projeto3.png" alt="Dashboard" class="projetos-imagem" />
+            <div class="caixa-textos-projetos">
+              <h3 class="info-projetos">Dashboard Financeiro</h3>
+              <p class="paragrafo-projetos">
+                Dashboard interativo com Streamlit, Pandas e Plotly para análise
+                de dados de vendas de supermercado com gráficos dinâmicos e insights.
+              </p>
             </div>
-        </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="tecnologias" class="tech-icons">
+      <h2 class="tech-title">Tecnologias</h2>
+      <div class="icon-container">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><i class="fab fa-html5" title="HTML5"></i></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><i class="fab fa-css3-alt" title="CSS3"></i></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><i class="fab fa-js" title="JavaScript"></i></a>
+        <a href="https://reactjs.org" target="_blank"><i class="fab fa-react" title="React"></i></a>
+        <a href="https://vuejs.org" target="_blank"><i class="fab fa-vuejs" title="Vue.js"></i></a>
+        <a href="https://nodejs.org" target="_blank"><i class="fab fa-node-js" title="Node.js"></i></a>
+        <a href="https://expressjs.com" target="_blank"><i class="fas fa-server" title="Express.js"></i></a>
+        <a href="https://www.python.org" target="_blank"><i class="fab fa-python" title="Python"></i></a>
+        <a href="https://www.mongodb.com" target="_blank"><i class="fas fa-database" title="MongoDB / MySQL"></i></a>
+        <a href="https://git-scm.com" target="_blank"><i class="fab fa-git-alt" title="Git"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github" title="GitHub"></i></a>
+        <a href="https://streamlit.io" target="_blank"><i class="fas fa-chart-line" title="Plotly / Streamlit"></i></a>
+      </div>
     </section>
 
     <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
-        <form class="formulario-contato" id="formulario">
-            <div class="nome-form">
-                <input placeholder="Nome" class="campo-form">
-            </div>
-            <div class="grupo-form">
-                <textarea placeholder="Digite sua mensagem"></textarea>"
-            </div>
-        </form>
+      <h2 class="contatos-titulo">Entre em contato</h2>
+      <form class="formulario-contato" id="formulario">
+        <div class="grupo-form">
+          <input placeholder="Nome" class="campo-form" />
+        </div>
+        <div class="grupo-form">
+          <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
+        </div>
+        <button type="submit" class="button-form">
+          <i class="fab fa-whatsapp"></i> Enviar WhatsApp
+        </button>
+      </form>
     </section>
 
-</body>
-
-<footer class="rodape">
-    <p>Desenvolvido por Márcio</p>
-    <p>© 2025</p>
-</footer>
-
+    <footer class="rodape">
+      <p>Desenvolvido por Dev Márcio</p>
+      <p>© 2025</p>
+    </footer>
+  </body>
 </html>
