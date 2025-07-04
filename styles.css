@@ -86,7 +86,14 @@ body {
   height: 350px;
   box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
   border-radius: 50%;
-  border: 4px solid var(--vidro);
+  border: 4px solid color(from color srgb r g b);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+  text-shadow: 0 0 4px #ffffff, 0 0 8px #ffffff;
 }
 
 h1 {
@@ -125,47 +132,12 @@ h1 {
   font-size: 1.2rem;
 }
 
-.tech-icons {
-  text-align: center;
-  padding: 6rem 2rem;
-}
-
-.tech-title {
-  font-size: 2.5rem;
-  color: var(--cor-titulo);
-  margin-bottom: 2rem;
-}
-
-.icon-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.icon-container i {
-  font-size: 3rem;
-  color: var(--cor-texto);
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-}
-
-.icon-container i:hover {
-  transform: scale(1.3);
-  color: var(--primaria);
-}
-
 .projetos {
   padding: 8rem 2rem 4rem;
   text-align: center;
 }
 
-.projetos h2 a {
-  all: unset;
-}
-
 .projetos-titulo {
-  text-decoration: none;
   font-size: 3rem;
   color: var(--cor-titulo);
   margin-bottom: 4rem;
@@ -189,14 +161,6 @@ h1 {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* garante altura completa */
-}
-
-.projetos-card a,
-.projetos-card a:visited {
-  text-decoration: none;
-  color: inherit;
 }
 
 .projetos-card:hover {
@@ -219,7 +183,7 @@ h1 {
 }
 
 .info-projetos {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--cor-titulo);
   margin-bottom: 5px;
@@ -229,6 +193,7 @@ h1 {
   color: rgba(226, 232, 240, 0.8);
   line-height: 1.25rem;
   margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .contatos {
@@ -242,7 +207,7 @@ h1 {
 }
 
 .formulario-contato {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
@@ -262,8 +227,13 @@ h1 {
   border: none;
 }
 
+textarea.campo-form {
+  min-height: 250px;
+  resize: vertical;
+}
+
 .campo-form:focus {
-  border: 1px solid var(--primaria);
+  border: 1px solid var(--cor-card-hover);
   box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
 }
 
@@ -294,7 +264,7 @@ h1 {
 
 .button-form:hover {
   background-color: #1ebe5d;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .rodape {
@@ -310,10 +280,50 @@ h1 {
   margin-bottom: 0.3rem;
 }
 
-section {
-  padding: 4rem 2rem !important;
+.tech-icons {
+  text-align: center;
+  padding: 6rem 2rem;
 }
 
-.icon-container a {
-  text-decoration: none;
+.tech-title {
+  font-size: 2.5rem;
+  color: var(--cor-titulo);
+  margin-bottom: 2rem;
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.icon-container i {
+  font-size: 3rem;
+  color: var(--cor-texto);
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-container i:hover {
+  transform: scale(1.3);
+  color: var(--primaria);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  font-size: 2rem;
+  color: var(--claro);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #ffffff;
 }
