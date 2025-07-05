@@ -84,10 +84,11 @@ body {
   margin-top: 50px;
   width: 350px;
   height: 350px;
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 0 20px var(--secundaria);
   border-radius: 50%;
-  border: 4px solid color(from color srgb r g b);
+  border: 4px solid var();
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: flutuar 5s ease-in-out infinite;
 }
 
 .social-links a:hover {
@@ -277,7 +278,7 @@ textarea.campo-form {
 }
 
 .rodape p {
-  margin-bottom: 0.3rem;
+  margin-bottom: -1.5rem;
 }
 
 .tech-icons {
@@ -315,6 +316,7 @@ textarea.campo-form {
   justify-content: center;
   gap: 2rem;
   margin-bottom: 1rem;
+  
 }
 
 .social-links a {
@@ -326,4 +328,27 @@ textarea.campo-form {
 .social-links a:hover {
   transform: scale(1.2);
   color: #ffffff;
+}
+
+.particulas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background: 
+  radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+  radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+  var(--maisEscuro);
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
