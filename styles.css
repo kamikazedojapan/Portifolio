@@ -444,25 +444,6 @@ textarea.campo-form {
     background: none;
     border: none;
     font-size: 2rem;
-    color: var(--claro);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-
-  .menu-toggle:hover {
-    transform: scale(1.1);
-  }
-
-  .menu-toggle i {
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .menu-toggle .rotated {
-    transform: rotate(90deg);
-  }
-
-  body.menu-aberto {
-    overflow: hidden;
   }
 
   .menu-toggle i {
