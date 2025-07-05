@@ -437,7 +437,7 @@ textarea.campo-form {
 
   .menu-toggle {
     position: fixed;
-    top: 2rem;
+    top: 1.5rem;
     right: 2rem;
     z-index: 1000;
     display: flex;
