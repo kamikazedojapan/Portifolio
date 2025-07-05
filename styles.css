@@ -475,7 +475,9 @@ textarea.campo-form {
   }
 
   .projetos-caixa {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 
