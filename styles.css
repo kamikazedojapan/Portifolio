@@ -412,7 +412,7 @@ textarea.campo-form {
   .menu {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.01s ease-in-out;
     flex-direction: column;
     background-color: var(--maisEscuro);
     position: absolute;
@@ -424,10 +424,10 @@ textarea.campo-form {
     padding: 0;
 }
 
-.menu.show {
-  max-height: 500px; /* o suficiente para exibir todos os links */
-  padding: 1rem 0;
-}
+  .menu.show {
+    max-height: 500px; /* o suficiente para exibir todos os links */
+    padding: 1rem 0;
+  }
 
   .menu-toggle {
     display: block;
