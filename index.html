@@ -150,15 +150,17 @@
       <h2 class="contatos-titulo">Entre em contato</h2>
       <form class="formulario-contato" id="formulario">
         <div class="grupo-form">
-          <input placeholder="Nome" class="campo-form" />
+          <input placeholder="Nome" class="campo-form" id="nome"/>
         </div>
         <div class="grupo-form">
           <textarea
             class="campo-form"
             placeholder="Digite sua mensagem"
+            id="mensagem"
+            rows="4"
           ></textarea>
         </div>
-        <button type="submit" class="button-form">
+        <button type="submit" class="button-form" onclick="EnviarWhatsapp()">
           <i class="fab fa-whatsapp"></i> Enviar WhatsApp
         </button>
       </form>
@@ -184,4 +186,18 @@
       <p>Desenvolvido por Dev Márcio | © 2025</p>
     </footer>
   </body>
+
+  <script>
+    function EnviarWhatsapp() {
+      const nome = document.getElementById("nome").value
+      const mensagem = document.getElementById("mensagem").value
+      const telefone = "71992075016"
+  
+      const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+      const msgFormatada = encodeURIComponent(texto)
+  
+      const link = `https://wa.me/${telefone}?text=${msgFormatada}`
+      window.open(link, "_blank")
+    }
+  </script>
 </html>

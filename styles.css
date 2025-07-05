@@ -130,7 +130,7 @@ h1 {
 
 .sobre-paragrafo {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .projetos {
@@ -235,7 +235,7 @@ textarea.campo-form {
 
 .campo-form:focus {
   border: 1px solid var(--cor-card-hover);
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 0 20px rgba(230, 72, 54, 0.4);
 }
 
 .grupo-form {
