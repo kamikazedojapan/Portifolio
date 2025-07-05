@@ -410,36 +410,64 @@ textarea.campo-form {
   }
 
   .menu {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.01s ease-in-out;
-    flex-direction: column;
-    background-color: var(--maisEscuro);
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 0;
     right: 0;
-    width: 100%;
-    text-align: center;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--maisEscuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 5rem;
     gap: 2rem;
-    padding: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 999;
 }
 
   .menu.show {
-    max-height: 500px; /* o suficiente para exibir todos os links */
-    padding: 1rem 0;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .menu-toggle {
-    display: block;
-    position: absolute;
-    right: 1.5rem;
-    top: 1rem;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    display: flex;
+    background: none;
+    border: none;
     font-size: 2rem;
+    color: var(--claro);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  .menu-toggle i {
+    transition: transform 0.3s ease-in-out;
+  }
+
+.menu-toggle .rotated {
+    transform: rotate(90deg);
+  }
+
+  body.menu-aberto {
+    overflow: hidden;
   }
 
   .menu-toggle i {
     font-size: 2.2rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.05s ease-in-out, color 0.05s ease-in-out;
   }
 
   .rotated {

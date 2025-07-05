@@ -196,12 +196,11 @@
 
     toggleBtn.addEventListener("click", () => {
     menu.classList.toggle("show");
+    document.body.classList.toggle("menu-aberto");
 
     const icon = toggleBtn.querySelector("i");
     icon.classList.toggle("fa-bars");
     icon.classList.toggle("fa-times");
-
-    // Animação do ícone
     icon.classList.toggle("rotated");
 });
 
