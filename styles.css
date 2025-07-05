@@ -43,9 +43,11 @@ body {
 
 .menu {
   display: flex;
+  flex-wrap: wrap; /* ... */
   justify-content: center;
   list-style: none;
-  gap: 3rem;
+  gap: 1.5rem; /* 3rem */
+  z-index: 999;
 }
 
 .menu-link {
@@ -71,6 +73,16 @@ body {
   width: 100%;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--claro);
+  cursor: pointer;
+  z-index: 1000;
+}
+
 .cabecalho {
   min-height: 100vh;
   display: flex;
@@ -81,9 +93,10 @@ body {
 }
 
 .foto-perfil {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   margin-top: 50px;
-  width: 350px;
-  height: 350px;
   box-shadow: 0 0 20px var(--secundaria);
   border-radius: 50%;
   border: 4px solid var();
@@ -218,8 +231,9 @@ h1 {
 }
 
 .campo-form {
-  font-size: 1.5rem;
   width: 100%;
+  max-width: 600px;
+  font-size: 1.5rem;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
@@ -248,6 +262,7 @@ textarea.campo-form {
   justify-content: center;
   gap: 10px;
   margin: 0 auto;
+  width: 100%;
   background-color: var(--whatsapp);
   color: white;
   font-size: 1.2rem;
@@ -300,6 +315,7 @@ textarea.campo-form {
 }
 
 .icon-container i {
+  cursor: pointer;
   font-size: 3rem;
   color: var(--cor-texto);
   transition: transform 0.3s ease, color 0.3s ease;
@@ -350,5 +366,94 @@ textarea.campo-form {
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .projetos-caixa {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Celulares e Tablets */
+@media (max-width: 768px) {
+  .navegacao {
+    padding: 2.5rem;
+  }
+  .sobre-caixa,
+  .formulario-contato {
+    padding: 1rem;
+  }
+
+  .campo-form {
+    font-size: 1.2rem;
+  }
+
+  .paragrafo-projetos {
+    font-size: 1rem;
+  }
+  
+  .cabecalho {
+    padding-top: 120px; /* depende da nova altura da barra */
+  }
+
+  .cabecalho h1 {
+    font-size: 2.5rem;
+  }
+
+  .cabecalho-sub-titulo {
+    font-size: 1.2rem;
+  }
+
+  .foto-perfil {
+    max-width: 200px;
+  }
+
+  .menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    flex-direction: column;
+    background-color: var(--maisEscuro);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    gap: 2rem;
+    padding: 0;
+}
+
+.menu.show {
+  max-height: 500px; /* o suficiente para exibir todos os links */
+  padding: 1rem 0;
+}
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 2rem;
+  }
+
+  .menu-toggle i {
+    font-size: 2.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .rotated {
+    transform: rotate(180deg);
+  }
+
+  .projetos-caixa {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktops*/
+@media (min-width: 1024px) {
+  .projetos-caixa {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

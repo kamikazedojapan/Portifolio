@@ -20,13 +20,16 @@
   <body>
     <div class="particulas"></div>
     <nav class="navegacao">
-      <ul class="menu">
+      <ul class="menu" id="menu">
         <li><a href="#inicio" class="menu-link">Início</a></li>
         <li><a href="#sobre" class="menu-link">Sobre</a></li>
         <li><a href="#projetos" class="menu-link">Projetos</a></li>
         <li><a href="#tecnologias" class="menu-link">Tecnologias</a></li>
         <li><a href="#contatos" class="menu-link">Contato</a></li>
       </ul>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <main id="inicio" class="cabecalho">
@@ -188,6 +191,20 @@
   </body>
 
   <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    toggleBtn.addEventListener("click", () => {
+    menu.classList.toggle("show");
+
+    const icon = toggleBtn.querySelector("i");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-times");
+
+    // Animação do ícone
+    icon.classList.toggle("rotated");
+});
+
     function EnviarWhatsapp() {
       const nome = document.getElementById("nome").value
       const mensagem = document.getElementById("mensagem").value
