@@ -84,17 +84,19 @@ body {
 }
 
 .cabecalho {
-  min-height: 100vh;
+  height: 100dvh; 
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding-top: 80px;
+  align-items: center;     
+  justify-content: center; 
+  text-align: center;
+  gap: 0.1rem;
+  padding: 0 1rem; 
 }
 
 .foto-perfil {
-  width: 100%;
   max-width: 300px;
+  width: 100%;
   height: auto;
   margin-top: 50px;
   box-shadow: 0 0 20px var(--secundaria);
@@ -391,10 +393,6 @@ textarea.campo-form {
 
   .paragrafo-projetos {
     font-size: 1rem;
-  }
-  
-  .cabecalho {
-    padding-top: 120px; /* depende da nova altura da barra */
   }
 
   .cabecalho h1 {
